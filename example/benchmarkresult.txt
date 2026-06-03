@@ -1,0 +1,36 @@
+Successfully loaded component Vehicles (1.5.8.3079) with UID 3f1f62ee9e22ab19
+Loaded 22 component(s) from D:\Server\components
+[2026-06-03T13:00:31-0000] [Info] ═══════════════════════════════════════════════════════════
+[2026-06-03T13:00:32-0000] [Info]  [SS7-CORE] TITAN v1.0.0 — LIGHT speed + TITAN complexity
+[2026-06-03T13:00:32-0000] [Info]  [SS7-CORE] Hash buckets: 1024 | Max commands: 512
+[2026-06-03T13:00:32-0000] [Info]  [SS7-CORE] Group slots: 64 | Perm nodes: 64
+[2026-06-03T13:00:32-0000] [Info] ═══════════════════════════════════════════════════════════
+[2026-06-03T13:00:33-0000] [Info] [ss7rt] Runtime diagnostics ready.
+[2026-06-03T13:00:33-0000] [Info] 
+
+[2026-06-03T13:00:33-0000] [Info] ===============================================================
+[2026-06-03T13:00:33-0000] [Info]  [TITAN v1] BENCHMARK PROTOCOL — 100000 ITERATIONS
+[2026-06-03T13:00:33-0000] [Info] ===============================================================
+[2026-06-03T13:00:34-0000] [Info]  [✔] String Hash (FNV-1a)       : 350 ms 	(3.5000 µs/iter)
+[2026-06-03T13:00:35-0000] [Info]  [✔] Cmd Lookup O(1) Array      : 742 ms 	(7.4200 µs/iter)
+[2026-06-03T13:00:37-0000] [Info]  [✔] Full Dispatch (Empty Cmd)  : 1570 ms 	(15.6999 µs/iter)
+[2026-06-03T13:00:38-0000] [Info]  [✔] Full Dispatch (Alias O(1)) : 1742 ms 	(17.4200 µs/iter)
+[2026-06-03T13:00:41-0000] [Info]  [✔] Full Dispatch (+3 Params)  : 2655 ms 	(26.5499 µs/iter)
+[2026-06-03T13:00:42-0000] [Info]  [✔] Dispatch (Not Found Skip)  : 908 ms 	(9.0799 µs/iter)
+[2026-06-03T13:00:44-0000] [Info]  [✔] Dispatch (Perm Blocked)    : 1587 ms 	(15.8699 µs/iter)
+[2026-06-03T13:00:45-0000] [Info]  [✔] Parse Macros (Zero-Copy)   : 1206 ms 	(12.0600 µs/iter)
+[2026-06-03T13:00:46-0000] [Info]  [✔] Bitwise Perm Eval (O(1))   : 50 ms 	(0.5000 µs/iter)
+[2026-06-03T13:00:59-0000] [Info]  [✔] Typo Suggest (Levenshtein) : 13737 ms 	(137.3699 µs/iter)
+[2026-06-03T13:01:00-0000] [Info]  [✔] Reflection (ForEachCmd)    : 349 ms 	(3.4900 µs/iter)
+[2026-06-03T13:01:01-0000] [Info]  [✔] UI Formatting (3 Ops/iter) : 1659 ms 	(16.5900 µs/iter)
+[2026-06-03T13:01:02-0000] [Info] ===============================================================
+[2026-06-03T13:01:02-0000] [Info] [ss7rt] ═══════════════════════════════════════════════════════════
+[2026-06-03T13:01:03-0000] [Info] [ss7rt] TITAN RUNTIME METRICS — Uptime: 29150 ms
+[2026-06-03T13:01:03-0000] [Info] [ss7rt] Dispatches: 0 | Found: 0 | NotFound: 0 | Blocked: 0
+[2026-06-03T13:01:03-0000] [Info] [ss7rt] ─── Named Probes ───
+[2026-06-03T13:01:04-0000] [Info] [ss7rt] ═══════════════════════════════════════════════════════════
+[2026-06-03T13:01:04-0000] [Info] Legacy Network started on port 7777
+[2026-06-03T13:01:16-0000] [Warning] Couldn't announce legacy network to open.mp list.
+[2026-06-03T13:01:16-0000] [Warning] 	 Status: 406
+[2026-06-03T13:01:16-0000] [Warning] 	 Message: {"error":"failed to query server: socket read timed out"}
+[2026-06-03T13:01:17-0000] [Warning] This won't affect the server's behaviour.
