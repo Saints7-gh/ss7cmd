@@ -1,0 +1,34 @@
+# =============================================================================
+#  SS7CMD Command List Registration as Example
+#  Format: command_name required_level cooldown_ms
+#  Level: 0=Guest, 10=VIP, 25=Helper, 50=Mod, 100=Admin, 200=SAdmin, 255=Owner
+# =============================================================================
+
+# Basic commands (level 0 - everyone)
+heal 0 5000(5 second's cooldown)
+info 0
+stats 0
+id 0
+
+# VIP commands (level 10)
+vipcmd 10
+vipheal 10
+
+# Moderator commands (level 50)
+clearchat 50
+warn 50
+mute 50
+
+# Admin commands (level 100)
+kick 100
+ban 100
+setlevel 100
+giveweapon 100
+
+# Super Admin commands (level 200)
+setadmin 200
+restart 200
+
+# Owner commands (level 255)
+shutdown 255
+reloadcfg 255
