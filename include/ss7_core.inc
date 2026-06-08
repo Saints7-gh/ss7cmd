@@ -800,7 +800,14 @@ stock ss7cmdlist_reload()
         while (pos < len && (line[pos] == ' ' || line[pos] == '\t')) pos++;
         new cooldown_ms = 0;
         if (pos < len && line[pos] >= '0' && line[pos] <= '9')
-            cooldown_ms = strval(line[pos]);
+        {
+            cooldown_ms = 0;
+            while (pos < len && line[pos] >= '0' && line[pos] <= '9')
+            {
+                cooldown_ms = cooldown_ms * 10 + (line[pos] - '0');
+                pos++;
+            }
+        }
 
         // Register command
         new reg_idx = ss7_RegisterCmdEx(cmd, level, -1, cooldown_ms);

@@ -2,8 +2,7 @@
 //   ss7_hook.inc — SA-MP / open.mp Standard
 //
 //   Zero boilerplate integration:
-//     - Automatically initializes ss7cmd
-//     
+//     - Automatically initializes ss7cmd   
 // =============================================================================
 
 #if defined _ss7_hook_included
@@ -21,19 +20,11 @@
 public OnGameModeInit()
 {
     ss7_Init();
-
-    #if defined _ss7db_core_included
-        ss7db_Open();          
-    #endif
+    ss7cmdlist();
 
     #if defined ss7_gm_OnGameModeInit
         ss7_gm_OnGameModeInit();
     #endif
-
-    #if defined _ss7db_core_included
-        ss7db_Init();
-    #endif
-
     return 1;
 }
 
@@ -58,11 +49,6 @@ forward ss7_hook_OnGameModeInit();
 // =============================================================================
 public OnGameModeExit()
 {
-    #if defined _ss7db_core_included
-        ss7db_FlushAll();
-        ss7db_Close();
-    #endif
-
     #if defined ss7_gm_OnGameModeExit
         return ss7_gm_OnGameModeExit();
     #else
@@ -141,12 +127,6 @@ public OnPlayerConnect(playerid)
 {
     _ss7_Internal_ResetPlayer(playerid);
 
-    #if defined _ss7db_core_included
-        ss7db_InitPlayerCache(playerid);
-        ss7db_ResetAuthState(playerid);
-        ss7db_ShowAuthDialog(playerid);
-    #endif
-
     #if defined ss7_gm_OnPlayerConnect
         return ss7_gm_OnPlayerConnect(playerid);
     #else
@@ -175,11 +155,6 @@ forward ss7_hook_OnPlayerConnect(playerid);
 // =============================================================================
 public OnPlayerDisconnect(playerid, reason)
 {
-    #if defined _ss7db_core_included
-        ss7db_FlushPlayer(playerid);
-        ss7db_ResetPlayer(playerid);
-    #endif
-
     _ss7_Internal_ResetPlayer(playerid);
 
     #if defined ss7_gm_OnPlayerDisconnect
@@ -210,11 +185,6 @@ forward ss7_hook_OnPlayerDisconnect(playerid, reason);
 // =============================================================================
 public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
-    #if defined _ss7db_core_included
-        if (ss7db_HandleDialogResponse(playerid, dialogid, response, inputtext))
-            return 1;
-    #endif
-
     #if defined ss7_gm_OnDialogResponse
         return ss7_gm_OnDialogResponse(playerid, dialogid, response, listitem, inputtext);
     #else

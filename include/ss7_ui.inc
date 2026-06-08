@@ -80,6 +80,7 @@ stock ss7_SendSyntax(playerid, const usage[])
     new buf[160];
     format(buf, sizeof(buf), ">  Usage: %s", usage);
     SendClientMessage(playerid, SS7_COLOR_SYNTAX, buf);
+    return 0;
 }
 
 stock ss7_SendHeader(playerid, const title[], color = SS7_COLOR_HEADER)
